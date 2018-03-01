@@ -5,7 +5,7 @@
   <title>Help me choose</title>
   <link href="./main.css" rel="stylesheet" type="text/css">
 </head>
-<body style= "bakground-color: green">
+<body>
   <h1>Help me choose between...</h1>
   <div class="inputSection">
     <div class="inputs">
@@ -13,9 +13,22 @@
     </div>
     <button class="addOption">Add</button>
   </div>
+  <div class="resultSection"></div>
   <button class="goOption">Go!</button>
-  <div>
   <img src="grumpy cat.jpg" alt="grumpy cat" height="50" width"50">
-</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(function() {
+  $('.resultSection').hide()
+
+  var add_option = function() {
+    $('.inputs').append('<input></input>')
+  }
+
+  $('.addOption').click(add_option)
+
+  })
+</script>
 </body>
 </html>
