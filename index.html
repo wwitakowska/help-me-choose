@@ -21,6 +21,7 @@
 <script>
 $(function() {
   $('.resultSection').hide()
+  $('img').hide()
 
   var add_option = function() {
     $('.inputs').append('<input></input>')
@@ -32,11 +33,15 @@ $(function() {
   var submit = function() {
     $('.inputSection').hide()
     $('.resultSection').css('display', 'flex')
+    $('img').css('display', 'flex')
+    $('h1').text('The winner is:')
     $('input').each(function() {
       options.push($(this).val())
       })
       var winner = options[Math.floor(Math.random() * options.length)]
       $('.resultSection').text(winner)
+      $('.goOption').hide()
+
     }
     $('.goOption').click(submit)
   })
