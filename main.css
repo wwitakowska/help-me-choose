@@ -16,6 +16,10 @@ h1 {
   letter-spacing: 3px;
 }
 
+h1:hover { font-weight: bolder;
+  color: pink;
+  }
+
 .inputSection {
 margin: 50px 0px 50px 0px;
 width: 400px;
@@ -49,7 +53,12 @@ img {
     width: 40px;
     height: 30px;
     font-weight: bold;
-    color: gray;
+    background-color: pink;
+    opacity: 0.8;
+}
+
+button:hover {
+  opacity: 1;
 }
 
 .resultSection {
